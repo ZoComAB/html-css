@@ -41,10 +41,9 @@ _`<html>`-taggen indikerar att innehållet är `html`, vårt **Markup Language**
 <title> Första sidan </title>
 ```
 
-<details> 
-  <summary>Fråga: _Varför lägger vi denna kodrad i `<head>` och inte i `<body>`? Var visas texten upp på sidan?_ </summary>
-   Svar: Texten visas inte upp på själva sidan, inuti dokumentet. Texten visas som en överskrift på den tabb som vi har öppen i webbläsare. Därför ska texten inte ligga i `<body>`.
-</details>
+Fråga: _Varför lägger vi denna kodrad i `<head>` och inte i `<body>`? Var visas texten upp på sidan?_
+ 
+Svar: Texten visas inte upp på själva sidan, inuti dokumentet. Texten visas som en överskrift på den tabb som vi har öppen i webbläsare. Därför ska texten inte ligga i `<body>`.
 
 ### Sammanfattning
 
