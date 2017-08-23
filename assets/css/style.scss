@@ -1,0 +1,13 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#forkme_banner{
+  display: none;
+}
+
+
+.markdown-body>*:first-child{
+  display: none;
+}
