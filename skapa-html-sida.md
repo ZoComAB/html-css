@@ -24,6 +24,7 @@ Det __varje__ sida behöver och det första man kommer till när man besöker en
 2. I den mappen, skapa en fil som heter `index.html`
 3. Öppna `index.html` med textredigeraren som du laddade ner och installerade innan detta.
 4. Lägg till följande kod i dokumentet framför dig, dv.s. `index.html:
+
 ```html
 <html>
   <head>
@@ -32,9 +33,21 @@ Det __varje__ sida behöver och det första man kommer till när man besöker en
   <body>
 <html>
 ```
+
 _`<html>`-taggen indikerar att innehållet är `html`, vårt **Markup Language**. Inuti `<head>` hamnar all **"metadata"**, all extra information kring hur sidan ska visas upp etc. Det mesta vi kommer att göra kommer dock att ligga inuti `<body>`-taggen. Det är där allt som är synligt på sidan hamnar._
 5. Lägg till följande tagg inuti `<head>`-taggen:
+
 ```html
 <title> Första sidan </title>
 ```
-Varför lägger vi denna kodrad i `<head>` och inte i `<body>`? Var visas texten upp på sidan?
+
+<details> 
+  <summary>Fråga: _Varför lägger vi denna kodrad i `<head>` och inte i `<body>`? Var visas texten upp på sidan?_ </summary>
+   Svar: Texten visas inte upp på själva sidan, inuti dokumentet. Texten visas som en överskrift på den tabb som vi har öppen i webbläsare. Därför ska texten inte ligga i `<body>`.
+</details>
+
+### Sammanfattning
+
+Varje hemsida måste ha en `<html>`-tagg som innehåller en `<head>`-tagg och en `<body>`-tagg. Detta stämmer för alla hemsidor i hela världen!
+
+**Nu har vi faktiskt en fungerande hemsida, dock så har vi inget innehåll men det löser vi i nästa uppgift!**
