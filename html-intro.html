@@ -1,0 +1,339 @@
+<html>
+  <head>
+    <base href="file:///Users/jesperorb/projects/revealjs/">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/php.css">
+    <link rel="stylesheet" href="lib/css/tomorrow.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <meta charset="utf-8">
+    <title>HTML5 & CSS3 Grund</title>
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style type="text/css">
+      .reveal{
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+  
+        <!-- INTRO SLIDE -->
+        <section>
+          <section>
+            <h3><strong> Internet, webben och dess teknologier </strong></h3>
+            <p><em>HTML5 + CSS3</em></p>
+          </section>
+        </section>
+        
+        <!-- CONTENT -->
+  
+        <section>
+          <section>
+            <h1><strong>Vem är jag?</strong></h1>
+          </section>
+          <section>
+            <p><strong>Jesper Orb</strong></p>
+            <p>På uppdrag av <em>Lexicon</em></p> 
+            <p>Konsult för <strong>ZoCom</strong></p>
+            <p>Till vardags -> Yrkeshögskolelärare "Frontend"</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3><strong>Internet & World Wide Web</strong></h3>
+          </section>
+          <section>
+            <p>Webben skapades i princip av Tim Berners-Lee</p>
+            <p class="fragment fade-down">Han jobbade då för CERN och ville ha ett sätt att dela information på ett smidigt sätt</p>
+            <p class="fragment fade-down">1989 skrev han det första utkastet och 1991 blev det publikt utanför CERN</p>
+          </section>
+          <section>
+            <p>En hemsida består oftast av runt 4 delar</p>
+            <ul>
+              <li class="fragment slide-down">HTML - Allt innehåll</li>
+              <li class="fragment slide-down">CSS - Stylingen på detta innehåll</li>
+              <li class="fragment slide-down">JavaScript - Skapa interaktivtet</li>
+              <li class="fragment slide-down">Bilder & Video - Förhöja upplevelsen, illustrera</li>
+            </ul>
+          </section>
+          <section>      
+          </section>
+          <section>
+            <p>Vi behöver två saker för att utveckla för webben</p>
+            <p class="fragment fade-down">En <strong>browser</strong>: Ladda ner "Chrome"</p>
+            <p class="fragment fade-down">En <strong>textredigerare:</strong> Ladda ner "Visual Studio Code"</p>
+            <p class="fragment fade-down">Finns länkade på samlingssidan under "Verktyg"</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><strong>HTML</strong></h1>
+          </section>
+          <section>
+            <p>Alla information måste kategoriseras på något sätt</p>
+            <p class="fragment fade-down">Tänk på ett Word-document</p>
+            <ul>
+              <li class="fragment slide-down">Rubriker</li>
+              <li class="fragment slide-down">Brödtext</li>
+              <li class="fragment slide-down">Länkar</li>
+              <li class="fragment slide-down">Bilder</li>
+            </ul>
+            <p class="fragment fade-down">Word har sitt eget språk för detta, precis som weben har</p>
+          </section>
+          <section>
+            <p><strong>Markup Language</strong></p>
+            <p class="fragment fade-down">HTML = HyperText Markup Language</p>
+            <p class="fragment fade-down">Språk för att märka upp och dela upp</p>
+          </section>
+          <section>
+            <p>Detta görs med <em>taggar</em></p>
+            <img src="https://www.teaching-materials.org/htmlcss-2day/img/p_diagram.png" alt="Tag breakdown" style="border: none; box-shadow: none; max-height: 60vh;" />
+            <p class="fragment fade-down">Taggarna skapar ett <em><code>element</code></em></p>
+          </section>
+          <section>
+            <p>Varje hemsida har samma grund: <code><em>index.html</em></code></p>
+            <p>Och varje <code><em>index.html</em></code> startar alltid på samma sätt: </p>
+            <pre style="max-width: 600px"><code class="hljs html line-numbers" data-trim data-noescape>&lt;html&gt;
+&lt;/html&gt;</code></pre>
+          </section>
+          <section>
+            <p><strong>Vi skapar en hemsida</strong></p>
+            <ul>
+              <li>Skapa en ny mapp som heter <code><em>html-intro</em></code></li>
+              <li>I den mappen skapa en fil som heter <code><em>index.html</em></code></li>
+              <li>Öppna denna fil med din textredigerare och lägg till:</li>
+              <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;html&gt;
+  &lt;head&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </ul>
+          </section>
+          <section>
+            <p><code><em>&lt;head&gt;</em></code> innehåller all metadata, allt som inte syns i själva dokumentet men som dokumentet behöver för att visas</p>
+            <p class="fragment fade-down"><code><em>&lt;body&gt;</em></code> innehåller allt som ska synas i vårt dokument</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3><strong>Text & Länkar</strong></h3>
+            <p>Vårt första innehåll i <code><em>&lt;body&gt;</em></code></p>
+          </section>
+          <section>
+            <p>Ren text skrivs ofta i paragrafer</p>
+            <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;p&gt;Min f&ouml;rsta paragraf&lt;/p&gt;
+&lt;p&gt;Min andra paragraf&lt;/p&gt;</code></pre>
+          <a href="http://htmlreference.io/element/p/" class="reference">Referens - p-tagg</a>
+          </section>
+          <section>
+            <p>Rubriker skrivs med taggarna <code><em>&lt;h1&gt;</em></code> - <code><em>&lt;h6&gt;</em></code></p>
+            <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;h1&gt;Första rubriksnivån&lt;/h1&gt;
+  &lt;h2&gt;Andra rubriksnivån&lt;/h2&gt;
+     &lt;h3&gt;Tredje rubriksnivån&lt;/h3&gt;</code></pre>
+          <p class="fragment fade-down">Handlar inte om storlek utan om hierarki</p>
+          <a href="http://htmlreference.io/element/h1/" class="reference">Referens - h1</a>
+          </section>
+          <section>
+            <p>Länkar skrivs med taggen <code><em>&lt;a&gt;</em></code></p>
+            <p>För att veta vilken sida länken ska gå till måste vi ha ett såkallat <code><strong>attribut</strong></code> på länken</p>
+            <pre class="fragment fade-down"><code class="hljs html line-numbers" data-trim data-noescape>&lt;a href=&quot;https://www.dn.com&quot;&gt;Dn.se&lt;/a&gt;</code></pre>
+            <p class="fragment fade-down">Attributet <code><em>href</em></code> står för "hyperreference" och är den länk du vill gå till</p>
+            <p class="fragment fade-down">Namnet på vad som ska visas på sidan skriver vi innanför taggen</p>
+            <a class="reference" href="http://htmlreference.io/element/a/">Referens - a</a>
+          </section>
+          <section>
+            <p><strong>Övning</strong></p>
+            <p>Utöka din sida med valfritt innehåll, sidan ska innehålla:</p>
+            <ul>
+              <li>Paragrafer</li>
+              <li>Rubriker</li>
+              <li>Länkar</li>
+            </ul>
+          </section>
+          <section>
+            <section>
+              <p><em>Saker att tänka på</em></p>
+              <ul>
+                <li>HTML är inte förtjust i mellanslag eller svenska tecken</li>
+                <li>All text är det inga problem med, men allt annat kan krångla</li>
+                <li class="fragment slide-down">Vid namngivning av filer: använd inte mellanslag eller å ä ö</li>
+              </ul>
+            </section>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3><em>Mediaelement</em></h3>
+            <p> Bilder och video </p>
+          </section>
+          <section>
+            <blockquote>
+              Webben består till 60-70% av bilder och video
+            </blockquote>
+            <p class="fragment fade-down">Långt ifrån CERN där innehållet enbart var text och länkar</p>
+          </section>
+          <section>
+            <p>Bilder länkas in med <code><em>&lt;img&gt;</em></code>-taggen</p>
+            <p class="fragment fade-down">Istället för attributet <code><em>href=""</em></code> använder bilder attributet <code><em>src=""</em></code></p>
+            <p class="fragment fade-down">src = source = källa</p>
+          </section>
+          <section>
+            <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;img src=&quot;https://exempel.com/link-to-picture.png&quot;&gt;
+&lt;/img&gt;</code></pre>
+          </section>
+          <section>
+            <p>Förutom själva källan är det bra att ha attributet <code><em>alt</em></code></p>
+            <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;img 
+  src=&quot;https://exempel.com/link-to-picture.png&quot; 
+  alt="Min bild" &gt;  
+&lt;/img&gt;</code></pre>
+          <p class="fragment fade-down">Ger extra info om bilden om vi för muspekaren över bilden</p>
+          <p class="fragment fade-down">Hjälper t.ex. skärmläsare för blinda</p>
+          </section>
+          <section>
+            <p>Video lägger man till på flera olika sätt</p>
+            <p class="fragment fade-down">Dels har vi <code><em>&lt;video&gt;</em></code></p>
+            <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;video width=&quot;320&quot; height=&quot;240&quot;&gt;
+  &lt;source src=&quot;myVideo.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;</code></pre>
+          <p class="fragment fade-down">Bra om man har en lokal fil som man vill visa upp</p>
+          <p class="fragment fade-down">Annars kan man även använda YouTube</p>
+          </section>
+          <section>
+            <p>Övning</p>
+            <p>Lägg till en bild och någon typ av video på din sida, använd <code><em>&lt;img&gt;</em></code> samt <code><em>&lt;video&gt;</em></code></p>
+            <p>Extra: få videon att autostarta när man besöker sidan</p>
+          </section>
+          <section>
+            <p>Saker att tänka på</p>
+            <p class="fragment fade-down">Bilder och video förhöjer upplevelsen</p>
+            <p class="fragment fade-down">Men man betalar ett högt pris</p>
+            <p class="fragment fade-down">Ju mer bilder, desto större blir sidan = sidan tar längre tid att ladda</p>
+            <p class="fragment fade-down">Liten filstorlek = laddar snabbare = mer kunder</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3><em>Listor & Tabeller</em></h3>
+          </section>
+          <section>
+            <p>När vi har mycket information vill vi gärna har det strukturerat</p>
+            <p class="fragment fade-down">Då behöver vi mer än paragrafer</p>
+            <p class="fragment fade-down">Då har vi två sorters listor samt en tabell att använda</p>
+          </section>
+          <section>
+            <p>Oordnad lista är en lista utan siffror: <code><em>&lt;ul&gt;</em></code></p>
+            <div style="float: left; width: 600px">
+              <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;ul&gt;
+  &lt;li&gt;Sak 1&lt;/li&gt;
+  &lt;li&gt;Sak 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            </div>
+            <div style="float: left; width: 600px;">
+              <ul style="margin-top: 4rem">
+                <li>Sak 1</li>
+                <li>Sak 2</li>
+              </ul>
+            </div>
+        </section>
+                  <section>
+            <p>Ordnad lista är en lista med siffror: <code><em>&lt;ol&gt;</em></code></p>
+            <div style="float: left; width: 600px">
+              <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;ol&gt;
+  &lt;li&gt;Sak 1&lt;/li&gt;
+  &lt;li&gt;Sak 2&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            </div>
+            <div style="float: left; width: 600px;">
+              <ol style="margin-top: 4rem">
+                <li>Sak 1</li>
+                <li>Sak 2</li>
+              </ol>
+            </div>
+        </section>
+        <section>
+          <p>Har vi väldigt mycket data vill vi nog istället använda en tabell</p>
+          <p class="fragment fade-down">Lite mer uppmärkning men mer struktur</p>
+        </section>
+        <section>
+          <p>Man börjar med att lägga till kolumnrubriker</p>
+          <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Datum&lt;/td&gt;
+      &lt;td&gt;Aktivitet&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;</code></pre>
+        <p><code><em>&lt;td&gt;</em></code>  = table data, <code><em>&lt;tr&gt;</em></code> = table row</p>
+        </section>
+        <section>
+          <p>Sedan lägger vi till raderna i <code><em>&lt;tbody&gt;</em></code></p>
+          <pre><code class="hljs html line-numbers" data-trim data-noescape>  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;27 Juli&lt;/td&gt;
+      &lt;td&gt;Fiska&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        </section>
+        <section>
+          <p><em>Övning</em></p>
+          <p>Lägg till en tabell och en lista på din hemsida</p>
+          <p>Se till så att kolumnrubrikerna är i  <code><em>&lt;thead&gt;</code></em> och raderna i <code><em>&lt;tbody&gt;</em></code></p>
+          <p>Testa lägg till en bild eller en annan tagg inuti antingen en lista eller i din tabell</p>
+        </section>
+        </section>
+
+<!--         <section>
+          <section>
+            <h3><em>Semantisk HTML</em></h3>
+            <p>Taggar utan formattering</p>
+          </section>
+          <section>
+            <p>Många taggar har inneboende egenskaper</p>
+            <p class="fragment fade-down">En lista får automatiskt punkter och en viss indragning</p>
+            <p class="fragment fade-down">Det finns dock många element som enbart ska indikera vad vi har för innehåll</p>
+            <p class="fragment fade-down">Men som egentligen inte formatterar vårt innehåll</p>
+          </section>
+        </section> -->
+  
+      </div>
+    </div>
+    <!-- reveal.js scripts -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        transition: 'convex',
+        height: '90%',
+        width: '90%',
+        controls: true,
+        progress: true,
+        history: true,
+        keyboard: true,
+        overview: true,
+        center: true,
+        dependencies: [
+        { src: 'lib/js/classList.js',condition: function (){
+          return !document.body.classList;}},
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        {src: 'plugin/line-numbers/line-numbers.js'}
+        ]
+      });
+    </script>
+  </body>
+  </html>

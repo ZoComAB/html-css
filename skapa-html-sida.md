@@ -5,8 +5,8 @@
 Du behöver två saker för att kunna köra en sida, en **textredigerare** samt en **webbläsare**. Vilken textredigerare som helst fungerar egentligen men det finns vissa som föredras av webbutvecklare eftersom de har en del verktyg inbyggda som vanliga textredigerare saknar. Samma sak gäller med webbläsare.
 
 * **Textredigerare**
+  * [_Visual Studio Code_ skapad av Microsoft](https://code.visualstudio.com/) 
   * [_Atom_ skapad av GitHub](https://atom.io/)
-  * [_Visual Studio Code_ skapad av Microsoft](https://code.visualstudio.com/)
   * [_Sublime Text_ skapad av glada entusiaster](https://www.sublimetext.com/)
 
 * **Webbläsare**
@@ -49,4 +49,4 @@ Svar: Texten visas inte upp på själva sidan, inuti dokumentet. Texten visas so
 
 Varje hemsida måste ha en `<html>`-tagg som innehåller en `<head>`-tagg och en `<body>`-tagg. Detta stämmer för alla hemsidor i hela världen!
 
-**Nu har vi faktiskt en fungerande hemsida, dock så har vi inget innehåll men det löser vi i nästa uppgift!**
+**Nu har vi faktiskt en fungerande hemsida, dock så har vi inget innehåll men det löser vi med html!**

@@ -43,9 +43,13 @@
 * [HTML 5 Tutorial ~ W3schools.com](https://www.w3schools.com/html/default.asp)
   * En guide som går igenom alla saker man behöver ha för att bygga en egen hemsida med HTML & CSS
 
+#### Verktyg
+ * [Textredigeraren __Visual Studio Code__ skapad av Microsoft](https://code.visualstudio.com/)
+ * [Webbläsare __Chrome__ skapad av Google](https://www.google.com/chrome/browser/desktop/index.html)
+
 ## Genomgångar
 
-* [__Introduktion till HTML__](html_css.html)
+* [__Introduktion till HTML__](html-intro.html)
 
 ## Instruktioner
 
