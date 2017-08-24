@@ -45,18 +45,9 @@
 
 ## Genomgångar
 
-* [__Introduktion till HTML__]()
-* [__Intrduktion till CSS__]()
+* [__Introduktion till HTML__](html_css.html)
 
-## Övningar
+## Instruktioner
 
-* [Skapa en första HTML-sida](skapa-html-sida.html)
-* [HTML ~ __Text & Länkar__](text-och-lankar.html)
-* [HTML ~ __Mediaelement__](mediaelement.html)
-* [HTML ~ __Listor & Tabeller__](listor-och-tabeller.html)
-* [HTML ~ __Semantiska taggar__](semantiska-taggar.html)
-* [CSS  ~ Lägg till CSS i ditt dokument](lagg-till-css.html)
-* [CSS ~ Selektor & Färg](selektor-och-farg.html)
-* [CSS ~ Klasser & ID](klasser-och-id.html)
-* [CSS ~ Gruppering & Boxmodellen](gruppering-och-boxmodellen.html)
-* [CSS ~ Positionering](positionering.html)
+* [HTML ~ __Skapa en första HTML-sida__](skapa-html-sida.html)
+* [CSS  ~ __Lägg till CSS i ditt dokument__](lagg-till-css.html)

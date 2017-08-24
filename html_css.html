@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <base href="https://jesperorb.github.io/revealjs/">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/php.css">
+    <link rel="stylesheet" href="lib/css/tomorrow.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <meta charset="utf-8">
+    <title>HTML & CSS ~ ☕️</title>
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style type="text/css">
+      .reveal{
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+  
+  
+        <!-- INTRO SLIDE -->
+        <section>
+          <section>
+            <h3><strong> Internet, webben och dess teknologier </strong></h3>
+            <p><em>HTML5 + CSS3</em></p>
+          </section>
+        </section>
+        
+        <!-- CONTENT -->
+  
+        <section>
+          <section>
+            <h1><strong>Vem är jag?</strong></h1>
+          </section>
+          <section>
+            <p><strong>Jesper Orb</strong></p>
+            <p>På uppdrag av <em>Lexicon</em></p> 
+            <p>Konsult för <strong>ZoCom</strong></p>
+            <p>Till vardags -> Yrkeshögskolelärare "Frontend"</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3><strong>Internet & World Wide Web</strong></h3>
+          </section>
+          <section>
+            
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><strong>HTML</strong></h1>
+          </section>
+          <section>
+            <p>Alla information måste kategoriseras på något sätt</p>
+            <p class="fragment fade-down">Tänk på ett Word-document</p>
+            <ul>
+              <li class="fragment slide-down">Rubriker</li>
+              <li class="fragment slide-down">Brödtext</li>
+              <li class="fragment slide-down">Länkar</li>
+              <li class="fragment slide-down">Bilder</li>
+            </ul>
+            <p class="fragment fade-down">Word har sitt eget språk för detta, precis som weben har</p>
+          </section>
+          <section>
+            <p><strong>Markup Language</strong></p>
+            <p class="fragment fade-down">HTML = HyperText Markup Language</p>
+            <p class="fragment fade-down">Språk för att märka upp och dela upp</p>
+          </section>
+          <section>
+            <p>Detta görs med <em>taggar</em></p>
+            <img src="https://www.teaching-materials.org/htmlcss-2day/img/p_diagram.png" alt="Tag breakdown" style="border: none; box-shadow: none; max-height: 60vh;" />
+          </section>
+          <section>
+            <p>Varje hemsida </p>
+          </section>
+        </section>
+  
+      </div>
+    </div>
+    <!-- reveal.js scripts -->
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        transition: 'convex',
+        height: '90%',
+        width: '90%',
+        controls: true,
+        progress: true,
+        history: true,
+        keyboard: true,
+        overview: true,
+        center: true,
+        dependencies: [
+        { src: 'lib/js/classList.js',condition: function (){
+          return !document.body.classList;}},
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        {src: 'plugin/line-numbers/line-numbers.js'}
+        ]
+      });
+    </script>
+  </body>
+  </html>
