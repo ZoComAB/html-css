@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="lib/css/tomorrow.css">
     <link rel="shortcut icon" type="image/png" href="favicon.png"/>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>HTML5 & CSS3 Grund ~ CSS</title>
     <script>
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
@@ -14,6 +14,11 @@
       link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
       document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
+    <style type="text/css">
+      .reveal em {
+        padding: 0.5rem;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
@@ -23,7 +28,8 @@
         <!-- INTRO SLIDE -->
         <section>
           <section>
-            <h1></h1>
+            <h1><em>CSS</em></h1>
+            <p>Cascading Style Sheet</p>
           </section>
         </section>
         
@@ -31,10 +37,198 @@
   
         <section>
           <section>
-            <h1></h1>
+            <h1><em>Selektorer</em></h1>
+            <p>Anger vad som ska stylas</p>
+          </section>
+          <section>
+            <p>Det är i css som "styrkan" anges</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>header{} /* väljer alla taggar */
+.header{} /* väljer alla taggar med klassen "header" */
+#header{} /* väljer elementet med id "header" */</code></pre>
+          </section>
+          <section>
+            <p>Selektorer kan vara ännu mer specifika</p>
+            <p><em>"Jag vill välja alla a-taggar inuti 'header'"</em></p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header a {
+  color: red;
+}</code></pre>
+          <p class="fragment fade-down"><strong>Observera mellanslaget mellan header och a</strong></p>
+          </section>
+          <section>
+            <p>Går att välja hur djupt som helst</p>
+            <p><em>"Jag vill välja alla p-taggar i alla  a-taggar inuti 'header'"</em></p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header a p {
+  color: red;
+}</code></pre>
+          <p class="fragment fade-down"><strong>Observera mellanslaget mellan header och a</strong></p>
+          </section>
+          <section>
+            <p>Klasser, id och taggar går att kombinera</p>
+            <p><strong>"Välj alla a-taggar inuti klassen header inuti id main-container</strong></p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>#main-container .header a {
+  color: red;
+}</code></pre>
+          </section>
+          <section>
+            <h3><strong>CSS Diner - Where we feast on Selectors</strong></h3>
+            <h3><a href="https://flukeout.github.io/" target="_blank">https://flukeout.github.io</a></h3>
           </section>
         </section>
-  
+
+        <section>
+          <section>
+            <h1><em>Egenskaper</em></h1>
+          </section>
+          <section>
+            <p><em>Måttenheter</em></p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header {
+  width: 200px;
+  width: 20rem; /* relativ  till fontstorleken */
+  width: 20%; /* relativ till förälderns bredd */
+  width: 20vw; /* relativ till fönstret: 1vw = 1% av fönstrets bredd*/
+}</code></pre>
+          </section>
+          <section>
+            <p>Många egenskaper utgår från vad föräldern har för egenskaper</p>
+            <pre><code class="hljs html line-numbers" data-trim data-noescape>&lt;div&gt; &lt;!-- F&ouml;r&auml;lder --&gt;
+  &lt;p&gt; Child   &lt;/p&gt;
+  &lt;p&gt; Child 2 &lt;/p&gt;
+&lt;div&gt;</code></pre>
+          <p><strong>Om inget är skrivet så ärver elementet av föräldern: Cascading</strong></p>
+          </section>
+          <section>
+            <p>Min och max sätter höjd och bredd om man inte vet exakt hur stort det ska vara</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  max-width: 300px;
+  width: 200px;     
+}</code></pre>
+          <p class="fragment fade-down"><code><em>max-width</em></code> sätter inte själva bredden</p>
+          <p class="fragment fade-down">Går även på <code><em>height</em></code></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><em>Boxmodellen</em></h1>
+            <p>bounding, margin & padding</p>
+          </section>
+          <section>
+            <img src="https://www.teaching-materials.org/htmlcss-2day/img/box-model.png">
+            <p>Varje element utgår från denna modell</p>
+          </section>
+          <section>
+            <p>De flesta element är av typen<code><em>block</em></code></p>
+            <p><code><em>block</em></code> har <code><em>width</em></code> och tar upp hela bredden</p>
+            <p class="fragment fade-down">Resten är antingen <code><em>inline</em></code></p>
+            <p class="fragment fade-down">inline har ingen bredd</p>
+          </section>
+          <section>
+            <p><code><em>margin</em></code> är avståndet utåt till andra element</p>
+            <p><code><em>padding</em></code> är avståndet inåt till andra element</p>
+          </section>
+          <section>
+            <p>Avstånd mellan element</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  margin: 30px; /* 30px på alla sidor */
+  margin: 30px 10px 10px 10px;
+}</code></pre>
+          <p class="fragment fade-down">Stter vi fler värden så kan vi bestämma alla sidor</p>
+          <p class="fragment fade-down"><strong><code>Top -> right -> bottom -> left</code></strong></p>
+          </section>
+          <section>
+            <p>Många egenskaper har <code><em>Shorthands</em></code></p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  margin: 30px; /* shorthand för alla sidor */
+  border: 1px solid red;
+}</code></pre>
+          <p class="fragment fade-down">Med <code><em>border:</em></code> sätter vi <code><em>border-width</em></code><code><em>border-style</em></code> och <code><em>border-color</em></code></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1><em><code>position</code></em></h1>
+          </section>
+          <section>
+            <p>Med <code><em>position</em></code> bestämmer vi delvis var på sidan elementet ska vara positionerat</p>
+            <p>Default är <code><em>static</em></code> och säger inte så mycket</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  position: relative;
+  top: 50px;
+  left: 50px;
+}</code></pre>
+          <p class="fragment fade-down">Med <code><em>Relative</em></code> menas relativ till sig själv.</p>
+          </section>
+          <section>
+            <p>Absolut positionering</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  position: absolute;
+  top: 50;
+}</code></pre>
+          <p class="fragment fade-down">Oftast i relation till <code><em>&lt;body&gt;</em></code> </p>
+          </section>
+          <section>
+            <p>Fixed</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}</code></pre>
+          <p>Följer vår <strong>"viewport"</strong>, följer med när vi scrollar</p>
+          </section>
+          <section>
+            <p>Oftast enklaste sättet att positionera något i mitten</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.header{
+  width: 300px; /* Bredd måste finnas */
+  margin: auto; /* Marginalen expanderar automatiskt */
+}</code></pre>
+          </section>
+          <section>
+            <p><em>Generell regel:</em></p>
+            <p>Undvik fasta mått, alla har inte samma storlek på skärmen</p>
+
+            <p>Dock så är det enklaste att göra fasta mått</p>
+          </section>
+        </section>
+        
+        <section>
+          <section>
+            <h1><em><code>float</code></em></h1>
+          </section>
+          <section>
+              <p>Ett standardsätt att positionera element bredvid varandra</p>
+              <p>Block är inställt på att ta upp hela bredden</p>
+              <pre><code class="hljs css line-numbers" data-trim data-noescape>.box{
+  width: 300px; /* Måste ha en bredd */
+  float: right;
+}</code></pre>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.box2{
+  width: 300px; /* Måste ha en bredd */
+  float: left;
+}</code></pre>
+          </section>
+          <section>
+            <p>Floats kan ta över, fortsätta flyta grejer fast vi inte vill</p>
+            <p class="fragment fade-down">Då får vi använda egenskapen <code><em> clear</em></code></p>
+            <img src="https://css-tricks.com/wp-content/csstricks-uploads/unclearedfooter.png" alt="Clear float">
+          </section>
+          <section>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.footer {
+  clear: both;      
+}</code></pre>
+          <img src="https://css-tricks.com/wp-content/csstricks-uploads/clearedfooter.png" alt="cleared!">
+          </section>
+          <section>
+            <p>När vi har använt <code><em>float</em></code> på ett element så kan vi säga på vilken sida det <em>INTE</em> får fortsätta flyta på</p>
+            <pre><code class="hljs css line-numbers" data-trim data-noescape>.box{
+  clear: left;
+  clear: right;
+  clear: both;
+}</code></pre>
+          </section>
+        </section>
+
+      
       </div>
     </div>
     <!-- reveal.js scripts -->
