@@ -52,12 +52,21 @@
 #### Positionering
 * [Learn CSS Positioning in 10 easy steps](http://www.barelyfitz.com/screencast/html-training/css/positioning/)
   * Visuell guide över vanliga positioneringsegenskaper
-* [CSS-Tricks: All about floats](https://css-tricks.com/all-about-floats/)
-  * Guide över hur float fungerar
+* [**All about floats** @ CSS-Tricks](https://css-tricks.com/all-about-floats/)
+  * Guide över hur float & clear fungerar
+* [**Centering in CSS: A Complete Guide** @ CSS-Tricks](https://css-tricks.com/centering-css-complete-guide/)
+  * Hur man centrerar allting vertikalt och horizontellt 
 * [Flexbox Froggy](http://flexboxfroggy.com/)
   * Spel där man lär sig hur flexbox fungerar
-* [CSS-tricks: Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Guide to Flexbox @ CSS-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
   * Mer ingående guide om hur flexbox fungerar
+
+#### Färg
+
+* [Coolors.co](https://coolors.co/)
+  * Genererar färdiga färgpaletter
+* [Adobe Color](https://color.adobe.com/) 
+  * Färhjul för att ta fram bra nyanser och färgkombinationer. [**Complementary**](https://en.wikipedia.org/wiki/Complementary_colors) är sådana färger som "poppar".
 
 #### Verktyg
  * [Textredigeraren __Visual Studio Code__ skapad av Microsoft](https://code.visualstudio.com/)
